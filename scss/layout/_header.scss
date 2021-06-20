@@ -1,0 +1,147 @@
+.header {
+  grid-area: head;
+
+  height: 80rem;
+
+  width: 100vw;
+  max-width: 150rem;
+
+  overflow: hidden;
+
+
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10rem;
+    flex-direction: column;
+    height: 25rem;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-size: 6.25rem;
+    font-family: "Fraunces", serif;
+    color: #fff;
+    letter-spacing: 0.75rem;
+  }
+
+  &__arrow {
+    width: 3.5rem;
+    animation: header-arrow 2s infinite;
+  }
+
+  &__background {
+    width: 100%;
+    position: absolute;
+    z-index: -10;
+    object-fit: cover;
+   // transform: translateY(-10rem);
+    height: 80rem;
+    width: 100vw;
+    max-width: 150rem;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 5rem;
+  width: 100%;
+
+  //  background-color: cadetblue;
+  align-items: center;
+  color: #fff;
+  &__img {
+    width: 17.5rem;
+    cursor: pointer;
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    width: 50rem;
+    justify-content: space-between;
+    &-item {
+      list-style-type: none;
+      font-size: 1.8rem;
+
+      &:not(:last-child) {
+        &:hover {
+          color: var(--yellow);
+          cursor: pointer;
+        }
+      }
+
+      & a {
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          color: var(--yellow);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__button {
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    color: #000;
+
+    background-color: #fff;
+    font-family: "Fraunces", serif;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+
+    & a {
+      color: #000;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      color: #fff;
+
+      animation: button-pulse 1s infinite;
+
+      & a {
+        color: #fff;
+      }
+    }
+  }
+
+  &__mobile {
+    display: none;
+  }
+}
+
+@keyframes header-arrow {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+}
+
+@keyframes button-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
