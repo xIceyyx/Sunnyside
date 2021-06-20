@@ -3,11 +3,12 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-grid-template-rows: repeat(3, max-content);
-  
+  grid-template-rows: repeat(3, max-content);
 
   //  width: 100vw;
   justify-items: center;
+width: 100%;
+  overflow: hidden;
 
   grid-template-areas:
     "head"

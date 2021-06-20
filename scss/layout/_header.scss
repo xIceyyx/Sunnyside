@@ -3,12 +3,10 @@
 
   height: 80rem;
 
-  width: 100vw;
+  width: 100%;
   max-width: 150rem;
 
   overflow: hidden;
-
-
 
   &__wrapper {
     width: 100%;
@@ -37,9 +35,9 @@
     position: absolute;
     z-index: -10;
     object-fit: cover;
-   // transform: translateY(-10rem);
+    // transform: translateY(-10rem);
     height: 80rem;
-    width: 100vw;
+    width: 100%;
     max-width: 150rem;
   }
 }
